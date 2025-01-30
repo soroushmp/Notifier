@@ -12,8 +12,8 @@ KAVENEGAR_MAIN_URL = os.getenv('KAVENEGAR_MAIN_URL', 'https://api.kavenegar.com'
 KAVENEGAR_API_VERSION = os.getenv('KAVENEGAR_API_VERSION', 'v1')
 KAVENEGAR_SEND_SMS_ENDPOINT = os.getenv('KAVENEGAR_SEND_SMS_ENDPOINT', 'sms/send.json')
 
-# Overwrite Message Text Based On Contact Phone Number Or Not
-OVERWRITE_MESSAGE_TEXT = True
+# Overwrite Message Text Based On Contact Phone Number Or Not (String To Boolean)
+OVERWRITE_MESSAGE_TEXT = os.getenv('OVERWRITE_MESSAGE_TEXT', 'True').lower() == 'true'
 
 # SMS Service Instance
 SMS_SERVICE = KavenegarSMSService()
