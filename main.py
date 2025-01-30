@@ -11,7 +11,7 @@ from settings import SMS_SERVICE
 root = tk.Tk()
 root.withdraw()
 # ask user to select a file
-file_path = filedialog.askopenfilename()
+file_path = filedialog.askopenfilename(filetypes=[('CSV Files', '*.csv')])
 # ========================
 
 # Main Codes
